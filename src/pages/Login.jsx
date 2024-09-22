@@ -24,15 +24,15 @@ const Login = () => {
       </div>
 
       <form className="grid grid-cols gap-6" action="">
-        {/* UserName */}
+        {/* User ID */}
         <label className="input bg-white text-white rounded-2xl h-fit py-1 border-black dark:input-bordered flex items-center gap-2 pl-1">
           <div className="border p-1 rounded-full bg-[#85cb33]">
             <UserRound size={17} />
           </div>
           <input
-            type="text"
+            type="number"
             className="grow text-black placeholder-black"
-            placeholder="Username"
+            placeholder="User ID"
           />
         </label>
 
@@ -62,7 +62,11 @@ const Login = () => {
           </label>
         </Link>
       </form>
-      <Link to={"/signup"}>Signup</Link>
+      <Link to={"/signup"}>
+            <label className="input hover:bg-[rgb(133,203,51)] hover:text-white rounded-2xl h-fit py-1 input-bordered flex items-center gap-2 px-28">
+              <span className="px-2">Sign Up</span>
+            </label>
+        </Link>
     </div>
   );
 };

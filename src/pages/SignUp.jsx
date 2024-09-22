@@ -7,8 +7,8 @@ const SignUp = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
-    <div className="px-8 text-center items-center justify-center flex flex-col gap-10 h-screen ">
-      <div className="flex flex-col gap-6">
+    <div className="px-8 text-center items-center justify-center flex flex-col gap-6 h-screen ">
+      <div className="flex flex-col gap-3">
         <div className="Heading text-center text-[#85cb33] font-extrabold text-[40px]">
           <h2 className="leading-10">Welcome</h2>
         </div>
@@ -22,8 +22,8 @@ const SignUp = () => {
       </div>
 
       {/* SignUp form */}
-      <form className="grid grid-cols gap-6" action="">
-        {/* Full Name */}
+      <form className="grid grid-cols gap-3" action="">
+        {/* First Name */}
         <label className="input bg-white text-white rounded-2xl h-fit py-1 border-black dark:input-bordered flex items-center gap-2 pl-1">
           <div className="border p-1 rounded-full bg-[#85cb33]">
             <User size={17} />
@@ -31,10 +31,32 @@ const SignUp = () => {
           <input
             type="text"
             className="grow text-black placeholder-black"
-            placeholder="Full Name"
+            placeholder="First Name"
+          />
+        </label>
+        {/* Last Name */}
+        <label className="input bg-white text-white rounded-2xl h-fit py-1 border-black dark:input-bordered flex items-center gap-2 pl-1">
+          <div className="border p-1 rounded-full bg-[#85cb33]">
+            <User size={17} />
+          </div>
+          <input
+            type="text"
+            className="grow text-black placeholder-black"
+            placeholder="Last Name"
           />
         </label>
 
+        {/* Phone Number */}
+        <label className="input bg-white text-white rounded-2xl h-fit py-1 border-black dark:input-bordered flex items-center gap-2 pl-1">
+          <div className="border p-1 rounded-full bg-[#85cb33]">
+            <Mail size={17} />
+          </div>
+          <input
+            type="phone"
+            className="grow text-black placeholder-black"
+            placeholder="Phone"
+          />
+        </label>
         {/* Email */}
         <label className="input bg-white text-white rounded-2xl h-fit py-1 border-black dark:input-bordered flex items-center gap-2 pl-1">
           <div className="border p-1 rounded-full bg-[#85cb33]">
@@ -47,15 +69,27 @@ const SignUp = () => {
           />
         </label>
 
-        {/* Username */}
+        {/* Nationality */}
+        <label className="input bg-white text-white rounded-2xl h-fit py-1 border-black dark:input-bordered flex items-center gap-2 pl-1">
+          <div className="border p-1 rounded-full bg-[#85cb33]">
+            <User size={17} />
+          </div>
+          <input
+            type="text"
+            className="grow text-black placeholder-black"
+            placeholder="Nationality"
+          />
+        </label>
+
+        {/* User ID */}
         <label className="input bg-white text-white rounded-2xl h-fit py-1 border-black dark:input-bordered flex items-center gap-2 pl-1">
           <div className="border p-1 rounded-full bg-[#85cb33]">
             <UserRound size={17} />
           </div>
           <input
-            type="text"
+            type="number"
             className="grow text-black placeholder-black"
-            placeholder="Username"
+            placeholder="User ID"
           />
         </label>
 
@@ -98,14 +132,19 @@ const SignUp = () => {
         </label>
 
         {/* Submit Button */}
-        <Link to={"/home"}>
+        <Link to={"/"}>
             <label className="input bg-[#85cb33] text-white rounded-2xl h-fit py-1 input-bordered flex items-center gap-2 pl-1">
             <input type="submit" className="grow" value="SignUp" />
             </label>
         </Link>
       </form>
+      <Link to={"/"}>
+            <label className="input hover:bg-[rgb(133,203,51)] hover:text-white rounded-2xl h-fit py-1 input-bordered flex items-center gap-2 px-28">
+              <span className="px-2">Login</span>
+            </label>
+        </Link>
 
-      <Link to={"/"}>Login</Link>
+      {/* <Link to={"/"} className="hover:bg-[#85cb33] hover:text-white rounded-2xl h-fit py-1 text-center flex items-center gap-2 pl-1 w-1/5 mx-auto">Login</Link> */}
     </div>
   );
 };
